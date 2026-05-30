@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utils;
+namespace App\utils;
 
 class Validador {
     public static function esNumeroPositivo($dato): bool {
