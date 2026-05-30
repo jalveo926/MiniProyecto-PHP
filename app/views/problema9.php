@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Problema 9</title>
+    <link rel="stylesheet" href="app/styles/global.css">
 </head>
 <body>
     <h2>Problema 9: [Título del Problema]</h2>

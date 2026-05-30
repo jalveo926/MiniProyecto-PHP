@@ -1,0 +1,31 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS - PROBLEMA 5
+   Clasificación de Personas por Edad
+   ======================================== */
+
+.categoria {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.categoria:hover {
+    background-color: #f0f8ff;
+    transform: translateX(5px);
+}
+
+.categoria-titulo {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.categoria-detalle {
+    color: #7f8c8d;
+    font-size: 0.95em;
+}

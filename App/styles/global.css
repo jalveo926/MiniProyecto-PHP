@@ -1,0 +1,327 @@
+/* ========================================
+   ESTILOS GLOBALES - MINI PROYECTO
+   ======================================== */
+
+/* Reset y Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Body y estructura principal */
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+main, section, article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Encabezados */
+h1 {
+    color: #2c3e50;
+    margin: 20px 0 15px 0;
+    font-size: 2em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin: 15px 0 10px 0;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: #7f8c8d;
+    margin: 12px 0 8px 0;
+    font-size: 1.2em;
+}
+
+h4, h5, h6 {
+    color: #95a5a6;
+    margin: 10px 0 5px 0;
+}
+
+/* Párrafos y texto */
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Formularios */
+form {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Botones */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    padding: 10px 20px;
+    margin: 5px 5px 5px 0;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+    transform: translateY(0);
+}
+
+/* Variantes de botones */
+button[name="accion"],
+button[type="submit"] {
+    background-color: #27ae60;
+}
+
+button[name="accion"]:hover,
+button[type="submit"]:hover {
+    background-color: #229954;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #ecf0f1;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Clases globales de estado */
+.error {
+    color: #c0392b;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #fadbd8;
+    border-left: 4px solid #c0392b;
+    border-radius: 4px;
+}
+
+.success {
+    color: #27ae60;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #d5f4e6;
+    border-left: 4px solid #27ae60;
+    border-radius: 4px;
+}
+
+.info {
+    color: #2980b9;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #d6eaf8;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
+
+/* Listas */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Líneas divisoras */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ecf0f1;
+}
+
+/* Utilidades */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-30 { margin-top: 30px; }
+.mb-30 { margin-bottom: 30px; }
+
+.p-10 { padding: 10px; }
+.p-20 { padding: 20px; }
+.p-30 { padding: 30px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    main, section, article {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

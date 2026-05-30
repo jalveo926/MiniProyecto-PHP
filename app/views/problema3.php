@@ -2,10 +2,8 @@
 <html>
 <head>
     <title>Problema 3 - Presupuesto Hospital</title>
-    <style>
-        .barra { background-color: #3498db; height: 30px; margin: 5px 0; color: white; padding: 5px; }
-        .contenedor { width: 100%; max-width: 500px; margin-bottom: 15px; }
-    </style>
+    <link rel="stylesheet" href="app/styles/global.css">
+    <link rel="stylesheet" href="app/styles/problema3.css">
 </head>
 <body>
     <h2>Problema 3: Distribución del presupuesto del hospital</h2>
@@ -16,7 +14,7 @@
     </form>
 
     <?php if (isset($error)): ?>
-        <p style="color:red;">Error: <?= htmlspecialchars($error) ?></p>
+        <p class="error">⚠️ Error: <?= htmlspecialchars($error) ?></p>
     <?php endif; ?>
 
     <?php if ($resultados): ?>
@@ -32,7 +30,7 @@
                     <td><?= $area ?></td>
                     <td><?= $porcentaje ?>%</td>
                     <td>$ <?= number_format($monto, 2) ?></td>
-                    <td><div style="background:#2ecc71; width:<?= $ancho ?>px; height:20px;"></div></td>
+                    <td><div class="barra" style="width:<?= $ancho ?>px;"></div></td>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -44,7 +42,7 @@
         ?>
             <div class="contenedor">
                 <strong><?= $area ?> (<?= $porcentaje ?>%)</strong><br>
-                <div class="barra" style="width: <?= $porcentaje * 2 ?>%;">$ <?= number_format($monto, 2) ?></div>
+                <div class="barra" style="width: <?= $porcentaje * 3 ?>px;">$ <?= number_format($monto, 2) ?></div>
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
