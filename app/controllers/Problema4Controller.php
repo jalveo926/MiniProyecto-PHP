@@ -3,7 +3,6 @@
 use App\Utils\Validador;
 use App\Utils\Sanitizador;
 use App\Utils\Matematica;
-use App\Utils\Navigation;
 
 $resultado = null;
 $error = null;
