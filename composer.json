@@ -1,0 +1,11 @@
+{
+    "name": "mini-proyecto/app",
+    "description": "Mini proyecto DS VII",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
