@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Mini Proyecto - Menú</title>
+    <link rel="stylesheet" href="app/styles/global.css">
 </head>
 <body>
     <h1>Mini Proyecto - Problemas 1-9</h1>

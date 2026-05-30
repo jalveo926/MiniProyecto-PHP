@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Problema 1 - Estadísticas</title>
+    <link rel="stylesheet" href="app/styles/global.css">
 </head>
 <body>
     <h2>Problema 1: Calcular media, desviación, mínimo y máximo de 5 números positivos</h2>
@@ -13,7 +14,7 @@
     </form>
 
     <?php if (isset($error)): ?>
-        <p style="color:red;">Error: <?= htmlspecialchars($error) ?></p>
+        <p class="error">⚠️ Error: <?= htmlspecialchars($error) ?></p>
     <?php endif; ?>
 
     <?php if ($resultado): ?>

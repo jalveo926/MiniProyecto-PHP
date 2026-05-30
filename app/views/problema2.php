@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Problema 2 - Suma 1..1000</title>
+    <link rel="stylesheet" href="app/styles/global.css">
 </head>
 <body>
     <h2>Problema 2: Suma de los números del 1 al 1,000</h2>

@@ -1,0 +1,32 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS - PROBLEMA 3
+   Presupuesto del Hospital
+   ======================================== */
+
+.contenedor {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+}
+
+.barra {
+    background-color: #3498db;
+    height: 30px;
+    margin: 10px 0;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.barra:hover {
+    background-color: #2980b9;
+}

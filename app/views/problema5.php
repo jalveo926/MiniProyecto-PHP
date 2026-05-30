@@ -2,15 +2,8 @@
 <html>
 <head>
     <title>Problema 5 - Clasificación de Personas</title>
-    <style>
-        .error { color: red; font-weight: bold; }
-        .success { color: green; font-weight: bold; }
-        .info { color: blue; }
-        .categoria { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-        th { background-color: #f0f0f0; }
-    </style>
+    <link rel="stylesheet" href="app/styles/global.css">
+    <link rel="stylesheet" href="app/styles/problema5.css">
 </head>
 <body>
     <h2>Problema 5: Clasificación de Personas por Edad</h2>

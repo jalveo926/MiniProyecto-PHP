@@ -1,0 +1,54 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS - PROBLEMA 7
+   Calculadora de Datos Estadísticos
+   ======================================== */
+
+.resultados-box {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 15px 0;
+    border: 2px solid #3498db;
+    border-left: 5px solid #3498db;
+}
+
+.resultados-box h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.notas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.nota-input {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nota-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.nota-input::placeholder {
+    color: #bdc3c7;
+}
+
+@media (max-width: 768px) {
+    .notas-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
+
+    .resultados-box {
+        padding: 15px;
+    }
+}
