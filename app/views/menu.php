@@ -15,7 +15,7 @@
         <li><a href="index.php?action=problema6">Problema 6: N primeros múltiplos de 4</a></li>
         <li><a href="index.php?action=problema7">Problema 7: Calculadora de Datos Estadísticos</a></li>
         <li><a href="index.php?action=problema8">Problema 8: Estación del año</a></li>
-        <li><a href="index.php?action=problema9">Problema 9: [Por implementar]</a></li>
+        <li><a href="index.php?action=problema9">Problema 9: 15 primeras potencias de un número</a></li>
 
 
     </ul>
