@@ -75,8 +75,8 @@ class Persona
     {
         $cantidades = [];
 
-        foreach ($this->pacientesXCategoria as $categoria => $pacientes) {
-            $cantidades[$categoria] = count($pacientes);
+        foreach ($this->personasXCategoria as $categoria => $personas) {
+            $cantidades[$categoria] = count($personas);
         }
 
         return $cantidades;
