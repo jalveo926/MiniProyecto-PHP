@@ -12,7 +12,7 @@
         <li><a href="index.php?action=problema3">Problema 3: Presupuesto del Hospital</a></li>
         <li><a href="index.php?action=problema4">Problema 4: Suma de Pares e Impares del 1 al 200</a></li>
         <li><a href="index.php?action=problema5">Problema 5: Clasificación de Personas por Edad</a></li>
-        <li><a href="index.php?action=problema6">Problema 6: [Por implementar]</a></li>
+        <li><a href="index.php?action=problema6">Problema 6: N primeros múltiplos de 4</a></li>
         <li><a href="index.php?action=problema7">Problema 7: Calculadora de Datos Estadísticos</a></li>
         <li><a href="index.php?action=problema8">Problema 8: Estación del año</a></li>
         <li><a href="index.php?action=problema9">Problema 9: [Por implementar]</a></li>
