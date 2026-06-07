@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="app/styles/problema8.css">
 </head>
 <body>
-    <h2>Problema 8: Determinar la Estación del Año</h2>
+    <div class="page-wrap">
+    <h1>Problema 8</h1>
+    <h2>Determinar la Estación del Año</h2>
 
     <form method="POST">
         <label for="fecha">Ingresa una fecha (YYYY-MM-DD):</label>
@@ -73,5 +75,6 @@
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
     <?php include __DIR__ . '/../../footer.php'; ?>
+    </div>
 </body>
 </html>

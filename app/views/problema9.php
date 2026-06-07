@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="App/styles/problema9.css">
 </head>
 <body>
-    <h2>Problema 9: 15 primeras potencias de un número</h2>
+    <div class="page-wrap">
+    <h1>Problema 9</h1>
+    <h2>15 primeras potencias de un número</h2>
 
     <section>
         <form method="POST">
@@ -62,5 +64,6 @@
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
     <?php include __DIR__ . '/../../footer.php'; ?>
+    </div>
 </body>
 </html>

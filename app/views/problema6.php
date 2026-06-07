@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="App/styles/problema6.css">
 </head>
 <body>
+    <div class="page-wrap">
+    <h1>Problema 6</h1>
     <h2>Problema 6: N primeros múltiplos de 4</h2>
 
     <section>
@@ -65,5 +67,6 @@
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
     <?php include __DIR__ . '/../../footer.php'; ?>
+    </div>
 </body>
 </html>

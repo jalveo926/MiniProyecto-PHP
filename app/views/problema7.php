@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    <h2>Problema 7: Calculadora de Datos Estadísticos</h2>
+    <div class="page-wrap">
+    <h1>Problema 7</h1>
+    <h2>Calculadora de Datos Estadísticos</h2>
 
     <?php if ($error): ?>
     <p class="error">⚠️ <?php echo htmlspecialchars($error); ?></p>
@@ -105,6 +107,7 @@
     <?php endif; ?>
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
+    </div>
     <?php include __DIR__ . '/../../footer.php'; ?>
 </body>
 
