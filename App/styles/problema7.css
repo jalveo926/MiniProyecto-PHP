@@ -1,54 +1,159 @@
 /* ========================================
-   ESTILOS ESPECÍFICOS - PROBLEMA 7
-   Calculadora de Datos Estadísticos
+   PROBLEMA 7 - Calculadora Estadística
    ======================================== */
 
 .resultados-box {
-    background-color: #f0f8ff;
-    padding: 20px;
-    border-radius: 4px;
-    margin: 15px 0;
-    border: 2px solid #3498db;
-    border-left: 5px solid #3498db;
+    background: var(--surface2);
+    padding: 22px 24px;
+    border-radius: var(--radius-lg);
+    margin: 18px 0;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--glow2);
+}
+
+.resultados-box::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,77,255,0.12) 0%, transparent 70%);
 }
 
 .resultados-box h3 {
-    color: #2c3e50;
-    margin-top: 0;
+    color: var(--text);
+    margin: 0 0 16px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent2);
+    font-weight: 700;
 }
 
+/* Grid de inputs de notas */
 .notas-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px;
     margin: 20px 0;
 }
 
 .nota-input {
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--font-mono);
     font-size: 1em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.15s;
 }
 
 .nota-input:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    border-color: var(--accent2);
+    box-shadow: 0 0 0 3px rgba(124,77,255,0.15);
+    transform: scale(1.03);
 }
 
 .nota-input::placeholder {
-    color: #bdc3c7;
+    color: var(--text-dim);
+}
+
+/* Resultados estadísticos individuales */
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.stat-item:last-child { border-bottom: none; }
+
+.stat-label {
+    font-size: 0.82em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.stat-value {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05em;
+    color: var(--accent2);
 }
 
 @media (max-width: 768px) {
     .notas-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
         gap: 8px;
     }
 
     .resultados-box {
-        padding: 15px;
+        padding: 16px;
     }
+}
+
+/* Estadísticas visuales */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: linear-gradient(
+        135deg,
+        rgba(124,77,255,0.15),
+        rgba(124,77,255,0.05)
+    );
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glow2);
+}
+
+.stat-card .titulo {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.stat-card .valor {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent2);
+    font-family: var(--font-mono);
+}
+
+.notas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nota-chip {
+    background: rgba(124,77,255,0.12);
+    border: 1px solid rgba(124,77,255,0.25);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
 }

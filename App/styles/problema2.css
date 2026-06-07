@@ -1,0 +1,38 @@
+/* ========================================
+   PROBLEMA 2 - Suma de 1 a 1000
+   ======================================== */
+
+.resultado-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.resultado-simple-label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-weight: 500;
+}
+
+.resultado-simple-valor {
+    font-size: 4.5em;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-shadow: 0 0 40px rgba(0,229,255,0.3);
+    letter-spacing: -0.02em;
+}
+
+.resultado-simple-formula {
+    font-family: var(--font-mono);
+    font-size: 0.82em;
+    color: var(--text-dim);
+    margin-top: 4px;
+}

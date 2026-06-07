@@ -5,47 +5,71 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 16px;
+    margin-top: 18px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    font-family: var(--font-mono);
 }
 
 thead th {
-    background: #8e44ad;
-    color: #fff;
-    padding: 10px 14px;
+    background: var(--surface);
+    color: var(--accent2);
+    padding: 11px 16px;
     text-align: left;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border2);
 }
 
-tbody tr:nth-child(even) { background: #f9f4fc; }
-tbody tr:hover           { background: #ead6f5; }
+tbody tr:nth-child(even) { background: rgba(124,77,255,0.03); }
+
+tbody tr:hover td {
+    background: rgba(124,77,255,0.07);
+}
 
 tbody td {
-    padding: 8px 14px;
-    border-bottom: 1px solid #eee;
+    padding: 9px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.9em;
 }
 
+tbody tr:last-child td { border-bottom: none; }
+
+/* Expresión matemática */
 .expresion {
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 700;
-    color: #8e44ad;
+    color: var(--accent2);
+    font-family: var(--font-mono);
+    text-shadow: 0 0 10px rgba(124,77,255,0.4);
 }
 
+/* Valor resultado */
 .valor {
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--text);
     text-align: right;
+    font-family: var(--font-mono);
 }
 
+/* Mini barra de proporción */
 .barra-celda {
-    width: 200px;
-    background: #f0e6f9;
+    width: 180px;
+    background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 4px;
-    height: 20px;
+    height: 18px;
     overflow: hidden;
 }
 
 .barra-mini {
     height: 100%;
-    background: linear-gradient(90deg, #8e44ad, #c39bd3);
-    border-radius: 4px;
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, rgba(124,77,255,0.5), var(--accent2));
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(124,77,255,0.3);
 }

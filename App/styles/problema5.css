@@ -1,31 +1,89 @@
 /* ========================================
-   ESTILOS ESPECÍFICOS - PROBLEMA 5
-   Clasificación de Personas por Edad
+   PROBLEMA 5 - Clasificación por Edad
    ======================================== */
 
 .categoria {
     margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #bdc3c7;
-    border-left: 4px solid #3498db;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--surface2);
+    transition: border-color 0.25s, background 0.25s, transform 0.2s;
+    cursor: default;
 }
+
+.categoria:nth-child(2) { border-left-color: var(--accent2); }
+.categoria:nth-child(3) { border-left-color: var(--warning); }
+.categoria:nth-child(4) { border-left-color: var(--success); }
+.categoria:nth-child(5) { border-left-color: var(--danger); }
 
 .categoria:hover {
-    background-color: #f0f8ff;
-    transform: translateX(5px);
+    background: var(--bg);
+    transform: translateX(6px);
+    box-shadow: -4px 0 0 var(--accent), var(--glow);
 }
 
+.categoria:nth-child(2):hover { box-shadow: -4px 0 0 var(--accent2), var(--glow2); }
+.categoria:nth-child(3):hover { box-shadow: -4px 0 0 var(--warning); }
+.categoria:nth-child(4):hover { box-shadow: -4px 0 0 var(--success); }
+.categoria:nth-child(5):hover { box-shadow: -4px 0 0 var(--danger); }
+
 .categoria-titulo {
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .categoria-detalle {
-    color: #7f8c8d;
-    font-size: 0.95em;
+    color: var(--text-muted);
+    font-size: 0.88em;
+    font-family: var(--font-mono);
+}
+
+.grafico-container {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glow);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grafico-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.grafico-container canvas {
+    height: 450px !important;
+}
+
+.grafico-container {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glow);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grafico-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.grafico-container canvas {
+    height: 450px !important;
 }

@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="App/styles/problema4.css">
 </head>
 <body>
-    <h2>Problema 4: Suma de Pares e Impares del 1 al 200</h2>
+<div class="page-wrap">
+
+    <h1>Problema 4</h1>
+    <h2>Suma de Pares e Impares del 1 al 200</h2>
 
     <section class="resumen-grid">
 
-        <!-- Tarjeta pares -->
         <div class="tarjeta tarjeta-pares">
             <div class="tarjeta-icono">2n</div>
             <h3>Números Pares</h3>
@@ -20,7 +22,6 @@
             <p class="suma-valor"><?= number_format($resultado['sumaPares']) ?></p>
         </div>
 
-        <!-- Tarjeta impares -->
         <div class="tarjeta tarjeta-impares">
             <div class="tarjeta-icono">2n+1</div>
             <h3>Números Impares</h3>
@@ -29,7 +30,6 @@
             <p class="suma-valor"><?= number_format($resultado['sumaImpares']) ?></p>
         </div>
 
-        <!-- Tarjeta total -->
         <div class="tarjeta tarjeta-total">
             <div class="tarjeta-icono">Σ</div>
             <h3>Suma Total</h3>
@@ -37,9 +37,12 @@
             <p class="suma-label">Pares + Impares</p>
             <p class="suma-valor"><?= number_format($resultado['sumaTotal']) ?></p>
         </div>
+
     </section>
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
-    <?php include __DIR__ . '/../../footer.php'; ?>
+
+</div>
+<?php include __DIR__ . '/../../footer.php'; ?>
 </body>
 </html>

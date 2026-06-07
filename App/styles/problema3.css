@@ -1,32 +1,52 @@
 /* ========================================
-   ESTILOS ESPECÍFICOS - PROBLEMA 3
-   Presupuesto del Hospital
+   PROBLEMA 3 - Presupuesto del Hospital
    ======================================== */
 
 .contenedor {
     width: 100%;
-    max-width: 500px;
+    max-width: 540px;
     margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ecf0f1;
-    border-radius: 4px;
+    padding: 20px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 .barra {
-    background-color: #3498db;
-    height: 30px;
-    margin: 10px 0;
-    color: white;
-    padding: 5px;
-    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    height: 36px;
+    margin: 8px 0;
+    color: var(--bg);
+    padding: 0 14px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 12px rgba(0,229,255,0.2);
+    transition: filter 0.25s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.barra::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,0.12);
+    transform: skewX(-20deg);
+    transition: left 0.4s ease;
 }
 
 .barra:hover {
-    background-color: #2980b9;
+    filter: brightness(1.15);
+    transform: translateX(4px);
+}
+
+.barra:hover::after {
+    left: 160%;
 }

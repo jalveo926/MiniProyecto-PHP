@@ -1,0 +1,137 @@
+/* ========================================
+   MENU - Mini Proyecto
+   ======================================== */
+
+/* Hero header */
+.menu-hero {
+    max-width: 920px;
+    margin: 32px auto 8px;
+    padding: 0 4px;
+}
+
+.menu-hero-label {
+    font-family: var(--font-mono);
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.menu-hero h1 {
+    font-size: 2.6em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    border: none;
+    padding: 0;
+    margin: 0 0 6px;
+}
+
+.menu-hero h1::after { display: none; }
+
+.menu-hero-sub {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Grid de tarjetas */
+.menu-grid {
+    max-width: 920px;
+    margin: 24px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+/* Tarjeta individual */
+.menu-card {
+    display: grid;
+    grid-template-areas:
+        "num  arrow"
+        "title title"
+        "desc  desc";
+    grid-template-columns: 1fr auto;
+    row-gap: 4px;
+    padding: 20px 20px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.menu-card:hover {
+    border-color: var(--border2);
+    background: var(--surface2);
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-card:hover::before { opacity: 1; }
+
+.menu-card:hover .menu-arrow {
+    color: var(--accent);
+    transform: translateX(3px);
+}
+
+/* Número */
+.menu-num {
+    grid-area: num;
+    font-family: var(--font-mono);
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--accent2);
+    letter-spacing: 0.04em;
+    align-self: center;
+}
+
+/* Flecha */
+.menu-arrow {
+    grid-area: arrow;
+    font-size: 1em;
+    color: var(--text-dim);
+    transition: color 0.2s, transform 0.2s;
+    align-self: center;
+}
+
+/* Título */
+.menu-title {
+    grid-area: title;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+/* Descripción */
+.menu-desc {
+    grid-area: desc;
+    font-family: var(--font-mono);
+    font-size: 0.78em;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
+@media (max-width: 440px) {
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-hero h1 { font-size: 2em; }
+}

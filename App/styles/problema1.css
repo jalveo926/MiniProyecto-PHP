@@ -1,0 +1,83 @@
+/* ========================================
+   PROBLEMA 1 - Estadísticas de 5 números
+   ======================================== */
+
+/* Grid de inputs */
+.inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-field label {
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-field input {
+    max-width: 100%;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Tarjetas de resultado */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 24px 0 8px;
+}
+
+.stat-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    text-align: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    border-color: var(--border2);
+    box-shadow: var(--glow);
+}
+
+.stat-card-label {
+    font-size: 0.68em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+}
+
+.stat-card-value {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    line-height: 1;
+}
+
+.stat-card:nth-child(2) .stat-card-value { color: var(--accent2); }
+.stat-card:nth-child(3) .stat-card-value { color: var(--success); }
+.stat-card:nth-child(4) .stat-card-value { color: var(--warning); }
+
+@media (max-width: 600px) {
+    .inputs-grid { grid-template-columns: repeat(3, 1fr); }
+    .stats-grid  { grid-template-columns: repeat(2, 1fr); }
+}

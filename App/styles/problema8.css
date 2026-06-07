@@ -1,6 +1,5 @@
 /* ========================================
-   ESTILOS ESPECÍFICOS - PROBLEMA 8
-   Estación del Año
+   PROBLEMA 8 - Estación del Año
    ======================================== */
 
 .resultado-estacion {
@@ -8,12 +7,34 @@
 }
 
 .estacion-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 4px;
-    border: 2px solid #3498db;
+    background: var(--surface2);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 
+/* Centrar el formulario de fecha */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+form label {
+    text-align: center;
+}
+
+form input[type="date"] {
+    max-width: 240px;
+    margin: 0 auto;
+    /* Forzar ícono del calendario en blanco */
+    color-scheme: dark;
+}
+
+/* Columna centrada: imagen → badge → info */
 .estacion-display {
     margin: 20px 0;
     display: flex;
@@ -22,98 +43,117 @@
     gap: 20px;
 }
 
+/* Imagen */
 .estacion-imagen {
     width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .estacion-imagen:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
 .estacion-imagen img {
     width: 100%;
     height: auto;
     display: block;
+    filter: brightness(0.9) saturate(1.1);
+    transition: filter 0.35s;
 }
 
+.estacion-imagen:hover img {
+    filter: brightness(1) saturate(1.2);
+}
+
+/* Badge del nombre */
 .estacion-nombre {
-    font-size: 2.5em;
-    font-weight: bold;
-    padding: 20px 40px;
-    border-radius: 8px;
-    color: white;
+    font-size: 2.2em;
+    font-weight: 800;
+    padding: 18px 40px;
+    border-radius: var(--radius-lg);
+    color: var(--bg);
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: -0.02em;
+    min-width: 260px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 100%);
+    box-shadow: 0 0 32px rgba(0,229,255,0.25);
 }
 
-.estacion-nombre:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+.estacion-nombre:hover { transform: scale(1.04); }
 
+.estacion-nombre.verano   { background: linear-gradient(135deg, #e65c00, #f9d423); box-shadow: 0 0 32px rgba(249,212,35,0.25); }
+.estacion-nombre.otono    { background: linear-gradient(135deg, #8B4513, #D2691E); box-shadow: 0 0 32px rgba(210,105,30,0.25); }
+.estacion-nombre.invierno { background: linear-gradient(135deg, #1a1a2e, #16213e); color: var(--accent); border: 1px solid var(--accent); box-shadow: 0 0 32px rgba(0,229,255,0.2); }
+.estacion-nombre.primavera{ background: linear-gradient(135deg, #11998e, #38ef7d); box-shadow: 0 0 32px rgba(56,239,125,0.25); }
+
+/* Tabla de info — centrada y del mismo ancho que imagen/badge */
 .estacion-info {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #ffffff;
-    border: 1px solid #ecf0f1;
-    border-radius: 4px;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 4px;
+    padding: 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .estacion-info h4 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-align: center;
 }
 
 .estacion-info table {
     width: 100%;
-    margin-top: 10px;
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-family: var(--font-mono);
+    font-size: 0.88em;
 }
 
 .estacion-info th {
-    background-color: #ecf0f1;
-    color: #2c3e50;
+    background: transparent;
+    color: var(--text-muted);
     font-weight: 600;
-    padding: 10px;
-    text-align: left;
-    width: 100px;
+    padding: 8px 10px;
+    font-size: 0.8em;
+    letter-spacing: 0.06em;
+    width: 110px;
+    border-bottom: 1px solid var(--border);
 }
 
 .estacion-info td {
-    padding: 10px;
-    color: #555;
+    padding: 8px 10px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
 }
 
-.estacion-info tr:hover {
-    background-color: #f9f9f9;
-}
+.estacion-info tr:last-child th,
+.estacion-info tr:last-child td { border-bottom: none; }
+
+.estacion-info tr:hover th,
+.estacion-info tr:hover td { background: rgba(255,255,255,0.03); }
 
 @media (max-width: 768px) {
-    .estacion-display {
-        margin: 15px 0;
-    }
-
-    .estacion-imagen {
-        max-width: 100%;
-    }
-
-    .estacion-nombre {
-        font-size: 1.8em;
-        padding: 15px 30px;
-        min-width: 200px;
-    }
-
+    .estacion-display { margin: 14px 0; gap: 14px; }
+    .estacion-imagen  { max-width: 100%; }
+    .estacion-nombre  { font-size: 1.7em; padding: 14px 28px; min-width: 200px; }
+    .estacion-info    { max-width: 100%; }
     .estacion-info th,
-    .estacion-info td {
-        padding: 8px;
-        font-size: 0.9em;
-    }
+    .estacion-info td { padding: 7px 8px; font-size: 0.82em; }
 }
-
