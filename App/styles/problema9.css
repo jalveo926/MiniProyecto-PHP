@@ -1,0 +1,51 @@
+/* ========================================
+   PROBLEMA 9 - Potencias
+   ======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+thead th {
+    background: #8e44ad;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) { background: #f9f4fc; }
+tbody tr:hover           { background: #ead6f5; }
+
+tbody td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.expresion {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #8e44ad;
+}
+
+.valor {
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: right;
+}
+
+.barra-celda {
+    width: 200px;
+    background: #f0e6f9;
+    border-radius: 4px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.barra-mini {
+    height: 100%;
+    background: linear-gradient(90deg, #8e44ad, #c39bd3);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}

@@ -1,0 +1,46 @@
+/* ========================================
+   PROBLEMA 6 - Múltiplos de 4
+   ======================================== */
+
+.tabla-wrap {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #dde;
+    border-radius: 6px;
+    margin-top: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:nth-child(even) { background: #f4f8fb; }
+tbody tr:hover           { background: #dceefb; }
+
+tbody td, tfoot td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+tfoot td {
+    background: #eaf4ff;
+    border-top: 2px solid #3498db;
+}
+
+.operacion { color: #7f8c8d; font-size: 0.9em; }
+
+.valor {
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: right;
+}

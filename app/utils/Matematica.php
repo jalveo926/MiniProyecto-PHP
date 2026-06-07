@@ -90,5 +90,17 @@ class Matematica {
         if ($numero < 0) return 0;
         return sqrt($numero);
     }
+
+    /**
+     * Calcula la potencia de un número
+     * Encapsula pow() para evitar su uso directo en el código
+     *
+     * @param float $base     Número base
+     * @param int   $exponente Exponente
+     * @return float Resultado de base^exponente
+     */
+    public static function potencia($base, $exponente): float {
+        return pow($base, $exponente);
+    }
 }
 ?>
