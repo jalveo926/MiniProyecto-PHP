@@ -107,8 +107,9 @@
     <?php endif; ?>
 
     <?php echo \App\Utils\Navigation::backToMenu('index.php'); ?>
-    </div>
     <?php include __DIR__ . '/../../footer.php'; ?>
+    </div>
+    
 </body>
 
 </html>
