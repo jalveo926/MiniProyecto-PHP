@@ -38,6 +38,13 @@ main, section, article {
     margin-right: auto;
 }
 
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
 /* Encabezados */
 h1 {
     color: #2c3e50;

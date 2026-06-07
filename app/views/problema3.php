@@ -19,7 +19,7 @@
 
     <?php if ($resultados): ?>
         <h3>Presupuesto por área:</h3>
-        <table border="1" cellpadding="8">
+        <table  cellpadding="8">
             <tr><th>Área</th><th>Porcentaje</th><th>Monto (USD)</th><th>Gráfico</th></tr>
             <?php foreach ($resultados as $area => $monto): ?>
                 <?php 

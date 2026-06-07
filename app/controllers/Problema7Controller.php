@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Acción 1: Establecer cantidad de notas
     if ($accion === 'establecer_cantidad') {
+        // Validar cantidad de notas o sino mostrar error
         $cantidadInput = $_POST['cantidad'] ?? '';
         
         if (empty($cantidadInput)) {
