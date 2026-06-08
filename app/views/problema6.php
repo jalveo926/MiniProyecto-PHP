@@ -15,15 +15,7 @@
     <section>
         <form method="POST">
             <label for="n">¿Cuántos múltiplos de 4 deseas generar? (N):</label>
-            <input
-                type="number"
-                id="n"
-                name="n"
-                min="1"
-                max="1000"
-                value="<?= htmlspecialchars($n ?? '') ?>"
-                required
-            >
+            <input type="number" id="n"name="n" min="1" max="1000" value="<?= htmlspecialchars($n ?? '') ?>" required>
             <button type="submit">Generar</button>
         </form>
     </section>
@@ -101,13 +93,8 @@
                     maintainAspectRatio: false,
 
                     plugins: {
-                        legend: {
-                            display: true
-                        },
-                        title: {
-                            display: true,
-                            text: 'Crecimiento de los múltiplos de 4'
-                        }
+                        legend: { display: true },
+                        title: { display: true, text: 'Crecimiento de los múltiplos de 4' }
                     },
 
                     scales: {
