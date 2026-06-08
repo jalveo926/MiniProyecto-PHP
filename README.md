@@ -170,8 +170,6 @@ public static function sanitizarParaBD($dato): string
 ### Función: `media(array $numeros): float`
 **Propósito:** Calcula el promedio de un conjunto de números.
 
-**Fórmula:** $\frac{\sum_{i=1}^{n} x_i}{n}$
-
 **Implementación:**
 ```php
 public static function media(array $numeros): float {
@@ -190,8 +188,6 @@ $promedio = Matematica::media($numeros); // Resultado: 30
 
 ### Función: `desviacionEstandar(array $numeros): float`
 **Propósito:** Calcula la desviación estándar (dispersión de datos).
-
-**Fórmula:** $\sigma = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \mu)^2}{n}}$
 
 **Implementación:**
 ```php
@@ -212,8 +208,6 @@ public static function desviacionEstandar(array $numeros): float {
 
 ### Función: `sumarRango(int $inicio, int $fin): int`
 **Propósito:** Calcula la suma de números en un rango optimizadamente.
-
-**Fórmula (Gauss):** $\text{suma}(n) = \frac{n(n+1)}{2}$
 
 **Implementación:**
 ```php
@@ -237,8 +231,6 @@ $suma = Matematica::sumarRango(1, 1000); // Resultado: 500500
 ### Función: `cuadrado($numero): float`
 **Propósito:** Eleva un número al cuadrado.
 
-**Fórmula:** $x^2 = x \times x$
-
 **Implementación:**
 ```php
 public static function cuadrado($numero): float {
@@ -250,8 +242,6 @@ public static function cuadrado($numero): float {
 
 ### Función: `raizCuadrada($numero): float`
 **Propósito:** Calcula la raíz cuadrada de un número.
-
-**Fórmula:** $\sqrt{x}$
 
 **Implementación:**
 ```php
