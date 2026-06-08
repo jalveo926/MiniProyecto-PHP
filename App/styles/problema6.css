@@ -69,3 +69,15 @@ tfoot td {
     color: var(--accent);
     text-align: right;
 }
+
+.grafico-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    height: 450px;
+}
+
+#graficoMultiplos {
+    width: 100%;
+    height: 100%;
+}
