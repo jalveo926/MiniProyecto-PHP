@@ -24,17 +24,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verificar si se ha enviado el fo
                 $mes = (int)$fechaObj->format('m');
                 $dia = (int)$fechaObj->format('d');
                 
-                // Determinar estación según mes y día
-                // Hemisferio Norte
-                if (($mes === 3 && $dia >= 21) || ($mes > 3 && $mes < 6) || ($mes === 6 && $dia <= 20)) {
-                    $estacion = 'Primavera';
-                } elseif (($mes === 6 && $dia >= 21) || ($mes > 6 && $mes < 9) || ($mes === 9 && $dia <= 20)) {
-                    $estacion = 'Verano';
-                } elseif (($mes === 9 && $dia >= 21) || ($mes > 9 && $mes < 12) || ($mes === 12 && $dia <= 20)) {
-                    $estacion = 'Otoño';
-                } else {
-                    $estacion = 'Invierno';
-                }
+            // Determinar estación según la tabla proporcionada
+            if (($mes === 12 && $dia >= 21) || ($mes === 1) || ($mes === 2) || ($mes === 3 && $dia <= 20)) {
+                $estacion = 'Verano';
+            } elseif (($mes === 3 && $dia >= 21) || ($mes === 4) || ($mes === 5) || ($mes === 6 && $dia <= 21)) {
+                $estacion = 'Otoño';
+            } elseif (($mes === 6 && $dia >= 22) || ($mes === 7) || ($mes === 8) || ($mes === 9 && $dia <= 22)) {
+                $estacion = 'Invierno';
+            } else {
+                // Del 23 septiembre al 20 diciembre
+                $estacion = 'Primavera';
+            }
                 
                 $resultado = [
                     'fecha' => $fechaObj->format('d/m/Y'),
