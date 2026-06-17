@@ -18,7 +18,7 @@
                 <label for="num<?= $i ?>">Nº <?= $i ?></label>
                 <input type="number" id="num<?= $i ?>" name="num<?= $i ?>"
                        step="any" min="0" required
-                       value="<?= isset($_POST['num'.$i]) ? htmlspecialchars($_POST['num'.$i]) : '' ?>">
+                       value="<?= isset($_POST['num'.$i]) ? htmlspecialchars($_POST['num'.$i]) : '' ?>"> // Mantener el valor ingresado después de enviar el formulario
             </div>
             <?php endfor; ?>
         </div>

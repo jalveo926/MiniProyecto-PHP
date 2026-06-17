@@ -13,6 +13,7 @@ $numeros = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verificar si se envió el formulario
     for ($i = 1; $i <= 5; $i++) { 
         $valor = $_POST["num$i"] ?? ''; // Obtener el valor del número ingresado, o una cadena vacía si no se proporcionó
+        $valor = Sanitizador::sanitizarNumero($valor); // Sanitizar el valor para evitar inyecciones o caracteres no deseados        
         if (!Validador::esNumeroPositivo($valor)) { 
             $error = "El número $i no es válido. Debe ser un número positivo."; // Registrar el error en el archivo de log
             error_log($error, 3, __DIR__ . '/../logs/errores.log'); // Registrar el error en el archivo de log
