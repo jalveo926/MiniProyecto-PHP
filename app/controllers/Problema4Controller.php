@@ -10,6 +10,7 @@ use App\Utils\Navigation;
  * Utiliza switch para seleccionar el tipo de visualización.
  */
 
+// Definición de variables y constantes
 $LIMITE = 200;
 $sumaPares   = 0;
 $sumaImpares = 0;
@@ -30,8 +31,9 @@ for ($i = 1; $i <= $LIMITE; $i++) {
     }
 }
 
+// Resultados de la vista
 $resultado = [
-    'sumaPares'    => $sumaPares,
+    'sumaPares'    => $sumaPares, 
     'sumaImpares'  => $sumaImpares,
     'totalPares'   => count($pares),
     'totalImpares' => count($impares),
@@ -40,5 +42,6 @@ $resultado = [
     'impares'      => $impares,
 ];
 
+// Renderizar la vista correspondiente
 include __DIR__ . '/../views/problema4.php';
 ?>

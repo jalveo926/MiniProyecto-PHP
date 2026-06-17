@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'El número base debe ser un valor entero entre 1 y 9.';
         error_log($error, 3, __DIR__ . '/../logs/errores.log');
     } else {
-        $base     = (int)$baseInput;
-        $potencias = [];
+        $base     = (int)$baseInput; //
+        $potencias = []; 
 
-        for ($exp = 1; $exp <= 15; $exp++) {
-            $potencias[] = [
+        for ($exp = 1; $exp <= 15; $exp++) { 
+            $potencias[] = [ // Almacenar cada potencia en un array 
                 'exponente' => $exp,
                 'valor'     => Matematica::potencia($base, $exp),
             ];
@@ -39,5 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Renderizar la vista 
 include __DIR__ . '/../views/problema9.php';
 ?>

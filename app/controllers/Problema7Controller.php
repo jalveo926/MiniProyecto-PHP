@@ -19,10 +19,10 @@ if (isset($_SESSION['notas_data'])) {
     $notas = $_SESSION['notas_data'];
     $cantidadNotas = count($notas);
 } else {
-    $_SESSION['notas_data'] = [];
+    $_SESSION['notas_data'] = []; // Inicializar el array de notas en la sesión si no existe
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verificar si se envió el formulario
     $accion = $_POST['accion'] ?? '';
     
     // Acción 1: Establecer cantidad de notas
@@ -36,21 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = "Por favor ingresa una cantidad válida entre 1 y 100.";
         } else {
             $cantidadNotas = (int)$cantidadInput;
-            $_SESSION['cantidad_notas'] = $cantidadNotas;
+            $_SESSION['cantidad_notas'] = $cantidadNotas; // Guardar la cantidad de notas en la sesión para persistencia
         }
     } 
     // Acción 2: Agregar notas
-    elseif ($accion === 'agregar_notas') {
-        $cantidadNotas = $_SESSION['cantidad_notas'] ?? 0;
+    elseif ($accion === 'agregar_notas') { 
+        $cantidadNotas = $_SESSION['cantidad_notas'] ?? 0; // Obtener la cantidad de notas establecida en la sesión
         
         if ($cantidadNotas === 0) {
             $error = "Por favor establece la cantidad de notas primero.";
         } else {
-            $notas_ingresadas = [];
-            $error_notas = false;
+            $notas_ingresadas = []; // Array temporal para almacenar las notas ingresadas
+            $error_notas = false; // Variable para rastrear si hubo errores en las notas ingresadas
             
             // Recorrer todas las notas ingresadas
-            foreach ($_POST as $key => $value) {
+            foreach ($_POST as $key => $value) { // Verificar cada campo que comienza con 'nota_' para validar las notas ingresadas
                 if (strpos($key, 'nota_') === 0) {
                     if (empty($value)) {
                         $error = "Todas las notas deben ser ingresadas.";
@@ -65,7 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            
+
+            // Si no hubo errores en las notas ingresadas y se ingresó la cantidad correcta, guardar las notas en la sesión 
             if (!$error_notas && count($notas_ingresadas) === $cantidadNotas) {
                 $_SESSION['notas_data'] = $notas_ingresadas;
                 $notas = $notas_ingresadas;
@@ -91,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
     // Acción 3: Limpiar datos
     elseif ($accion === 'limpiar') {
-        session_unset();
+        session_unset(); // Limpiar todos los datos de la sesión
         $_SESSION['notas_data'] = [];
         $_SESSION['cantidad_notas'] = 0;
         $resultado = "Datos limpiados. Sistema reiniciado.";
@@ -100,5 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Renderizar la vista del Problema 7
 include __DIR__ . '/../views/problema7.php';
 ?>

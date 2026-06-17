@@ -7,10 +7,10 @@ $resultado = null;
 $error = null;
 $estacion = null;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fecha = $_POST['fecha'] ?? '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verificar si se ha enviado el formulario
+    $fecha = $_POST['fecha'] ?? ''; // Obtener la fecha ingresada por el usuario
     
-    if (empty($fecha)) {
+    if (empty($fecha)) { 
         $error = "Por favor ingresa una fecha.";
     } else {
         try {
@@ -49,5 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Renderizar la vista
 include __DIR__ . '/../views/problema8.php';
 ?>
