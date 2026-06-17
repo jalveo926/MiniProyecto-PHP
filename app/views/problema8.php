@@ -46,10 +46,10 @@
                         <h4>Información de la Estación:</h4>
                         <?php
                         $info = [
-                            'Primavera' => ['21 de marzo - 20 de junio',      'Período de florecimiento y renovación', '🌸'],
-                            'Verano'    => ['21 de junio - 20 de septiembre',  'Estación más cálida del año',           '☀️'],
-                            'Otoño'     => ['21 de septiembre - 20 de diciembre', 'Caída de hojas y cambios de color',  '🍂'],
-                            'Invierno'  => ['21 de diciembre - 20 de marzo',   'Estación más fría del año',             '❄️'],
+                            'Primavera' => ['23 de septiembre - 20 de diciembre', 'Período de florecimiento y renovación', '🌸'],
+                            'Verano'    => ['21 de diciembre - 20 de marzo', 'Estación más cálida del año', '☀️'],
+                            'Otoño'     => ['21 de marzo - 21 de junio', 'Caída de hojas y cambios de color', '🍂'],
+                            'Invierno'  => ['22 de junio - 22 de septiembre', 'Estación más fría del año', '❄️'],
                         ];
                         ?>
                         <table>
