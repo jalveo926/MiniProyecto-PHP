@@ -21,8 +21,8 @@
     <div class="resultados-box">
         <h3>Paso 1: ¿Cuántas notas deseas ingresar?</h3>
         <form method="POST">
-            <label>Cantidad de notas (1-100):</label>
-            <input type="number" name="cantidad" min="1" max="100" required>
+            <label>Cantidad de notas (2-100):</label>
+            <input type="number" name="cantidad" min="2" max="100" required>
             <button type="submit" name="accion" value="establecer_cantidad">Establecer Cantidad</button>
         </form>
     </div>
@@ -35,7 +35,7 @@
                 <?php for ($i = 1; $i <= $_SESSION['cantidad_notas']; $i++): ?>
                 <div>
                     <label>Nota <?php echo $i; ?>:</label>
-                    <input type="number" name="nota_<?php echo $i; ?>" min="0" max="20" step="0.1" class="nota-input"
+                    <input type="number" name="nota_<?php echo $i; ?>" min="0" max="100" step="0.1" class="nota-input"
                         value="<?php echo isset($notas[$i-1]) ? $notas[$i-1] : ''; ?>">
                 </div>
                 <?php endfor; ?>

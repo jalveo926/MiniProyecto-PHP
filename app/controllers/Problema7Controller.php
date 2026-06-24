@@ -56,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verificar si se envió el formul
                         $error = "Todas las notas deben ser ingresadas.";
                         $error_notas = true;
                         break;
-                    } elseif (!is_numeric($value) || $value < 0 || $value > 20) {
-                        $error = "Las notas deben ser valores numéricos entre 0 y 20.";
+                    } elseif (!is_numeric($value) || $value < 0 || $value > 100) {
+                        $error = "Las notas deben ser valores numéricos entre 0 y 100.";
                         $error_notas = true;
                         break;
                     } else {
